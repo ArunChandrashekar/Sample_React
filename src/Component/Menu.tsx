@@ -1,6 +1,6 @@
 import { MouseEvent } from "react";
-function ListGroup() {
-  let items = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
+function Menu() {
+  let items = ["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"];
   const handleClick = (event: MouseEvent) => console.log(event);
   return (
     <>
@@ -16,4 +16,4 @@ function ListGroup() {
     </>
   );
 }
-export default ListGroup;
+export default Menu;
