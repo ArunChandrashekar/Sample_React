@@ -1,13 +1,18 @@
 import { useState } from "react";
-function Menu() {
+interface Props {
+  heading: string;
+  items: string[];
+}
+function Menu(props: Props) {
   let items = ["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"];
+  items = props.items;
   const [activeIndex, setActiveIndex] = useState(-1);
   const handleClick = (index: number) => {
     setActiveIndex(index);
   };
   return (
     <>
-      <h1>Dynamic List</h1>
+      <h1>{props.heading}</h1>
       {items.length === 0 && <p>No Items is found in the list</p>}
       <ul className="list-group">
         {items.map((x, index) => (

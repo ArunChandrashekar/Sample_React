@@ -7,7 +7,10 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <Menu></Menu>
+      <Menu
+        heading="Hello"
+        items={["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"]}
+      ></Menu>
       <Content></Content>
       <Footer></Footer>
     </div>
