@@ -8,7 +8,7 @@ function App() {
   let menuItems = ["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"];
   return (
     <div>
-      <Alert message="alert message"></Alert>
+      <Alert>Hello Arun!</Alert>
       <Header></Header>
       <Menu heading="Hello" items={menuItems}></Menu>
       <Content></Content>
