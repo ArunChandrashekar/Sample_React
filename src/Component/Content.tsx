@@ -3,7 +3,6 @@ import FavColor from "./FavColor";
 function Content() {
   return (
     <>
-      <FavColor></FavColor>
       <div className="row">
         <div className="col-sm-6 mb-3 mb-sm-0">
           <div className="card">
