@@ -1,20 +1,23 @@
-import Alert from "./Component/Alert";
+/* import Alert from "./Component/Alert";
 import Button from "./Component/Button";
 import Content from "./Component/Content";
 import Footer from "./Component/Footer";
 import Header from "./Component/Header";
-import Menu from "./Component/Menu";
+import Menu from "./Component/Menu"; */
+import { useState } from "react";
+import RouterConfig from "./RouterConfig";
 
 function App() {
+  const [toggleState, setToggleState] = useState("true");
   let menuItems = ["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"];
   return (
     <div>
-      <Alert>Hello Arun!</Alert>
-      <Header></Header>
+      {/* <Header></Header>
       <Menu heading="Hello" items={menuItems}></Menu>
-      <Button>Click Me!</Button>
+      <Button>Click me!</Button>
       <Content></Content>
-      <Footer></Footer>
+      <Footer></Footer> */}
+      <RouterConfig></RouterConfig>
     </div>
   );
 }
