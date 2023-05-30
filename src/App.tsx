@@ -6,6 +6,8 @@ import Header from "./Component/Header";
 import Menu from "./Component/Menu"; */
 import { useState } from "react";
 import RouterConfig from "./RouterConfig";
+import Sample1 from "./Component/Sample";
+import EmployeeList from "./Component/EmployeeList";
 
 function App() {
   const [toggleState, setToggleState] = useState("true");
@@ -17,7 +19,9 @@ function App() {
       <Button>Click me!</Button>
       <Content></Content>
       <Footer></Footer> */}
-      <RouterConfig></RouterConfig>
+      {/* <RouterConfig></RouterConfig> */}
+      <Sample1></Sample1>
+      <EmployeeList></EmployeeList>
     </div>
   );
 }
