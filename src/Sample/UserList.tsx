@@ -10,7 +10,7 @@ const UserList = () => {
   const [error, setErrors] = useState("");
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/u sers")
+      .get("https://jsonplaceholder.typicode.com/users")
       //success of APi Call
       .then((res) => setUsers(res.data))
       //if any error or failed the APi call to the Server
