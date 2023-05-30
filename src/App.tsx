@@ -8,6 +8,7 @@ import { useState } from "react";
 import RouterConfig from "./RouterConfig";
 import Sample1 from "./Component/Sample";
 import EmployeeList from "./Component/EmployeeList";
+import UserList from "./Sample/UserList";
 
 function App() {
   const [toggleState, setToggleState] = useState("true");
@@ -21,7 +22,7 @@ function App() {
       <Content></Content>
       <Footer></Footer> */}
       {/* <RouterConfig></RouterConfig> */}
-      <select
+      {/* <select
         className="product select"
         onChange={(e) => setCatagorey(e.target.value)}
       >
@@ -30,7 +31,8 @@ function App() {
         <option value="kumar">Kumar</option>{" "}
       </select>
       <Sample1></Sample1>
-      <EmployeeList category={category}></EmployeeList>
+      <EmployeeList category={category}></EmployeeList> */}
+      <UserList></UserList>
     </div>
   );
 }
