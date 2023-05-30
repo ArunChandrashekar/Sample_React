@@ -12,6 +12,7 @@ import EmployeeList from "./Component/EmployeeList";
 function App() {
   const [toggleState, setToggleState] = useState("true");
   let menuItems = ["submenu1", "submenu2", "submenu3", "submenu4", "submenu5"];
+  const [category, setCatagorey] = useState("");
   return (
     <div>
       {/* <Header></Header>
@@ -20,8 +21,16 @@ function App() {
       <Content></Content>
       <Footer></Footer> */}
       {/* <RouterConfig></RouterConfig> */}
+      <select
+        className="product select"
+        onChange={(e) => setCatagorey(e.target.value)}
+      >
+        <option value=""></option>
+        <option value="Rana">Rana</option>
+        <option value="kumar">Kumar</option>{" "}
+      </select>
       <Sample1></Sample1>
-      <EmployeeList></EmployeeList>
+      <EmployeeList category={category}></EmployeeList>
     </div>
   );
 }

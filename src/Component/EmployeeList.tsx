@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-const EmployeeList = () => {
+interface Props {
+  category: string;
+}
+const EmployeeList = ({ category }: Props) => {
   const [name, setName] = useState<string[]>([]);
   useEffect(() => {
-    console.log("Read data from API");
+    console.log("Read data from API" + category);
     setName(["Rana", "Kumar"]);
-  }, []);
+  }, [category]);
   return (
     <div>
-      <p>Employee List</p>
-      {name}
+      <p>Employee List {category}</p>{" "}
     </div>
   );
 };
