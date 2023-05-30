@@ -8,10 +8,13 @@ interface Users {
 const UserList = () => {
   const [users, setUsers] = useState<Users[]>([]);
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-      console.log(res.data);
-      setUsers(res.data);
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/use")
+      .then((res) => {
+        console.log(res.data);
+        setUsers(res.data);
+      })
+      .catch((err) => console.log(err));
   }, []);
   return (
     <div>
