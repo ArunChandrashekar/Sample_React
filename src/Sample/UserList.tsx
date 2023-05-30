@@ -7,17 +7,20 @@ interface Users {
 
 const UserList = () => {
   const [users, setUsers] = useState<Users[]>([]);
+  const [error, setErrors] = useState("");
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then((res) => {
-        console.log(res.data);
-        setUsers(res.data);
-      })
-      .catch((err) => console.log(err));
+      .get("https://jsonplaceholder.typicode.com/u sers")
+      //success of APi Call
+      .then((res) => setUsers(res.data))
+      //if any error or failed the APi call to the Server
+      .catch((err) => {
+        setErrors(err.message);
+      });
   }, []);
   return (
     <div>
+      {error && <p>{error}</p>}
       <ul>
         {users.map((x) => (
           <li key={x.id}>{x.name}</li>
