@@ -9,7 +9,7 @@ const UserList = () => {
   const [users, setUsers] = useState<Users[]>([]);
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/use")
+      .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
