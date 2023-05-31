@@ -9,6 +9,7 @@ import RouterConfig from "./RouterConfig";
 import Sample1 from "./Component/Sample";
 import EmployeeList from "./Component/EmployeeList";
 import UserList from "./Sample/UserList";
+import UserTable from "./Sample/UserTable";
 
 function App() {
   const [toggleState, setToggleState] = useState("true");
@@ -32,7 +33,8 @@ function App() {
       </select>
       <Sample1></Sample1>
       <EmployeeList category={category}></EmployeeList> */}
-      <UserList></UserList>
+      {/* <UserList></UserList> */}
+      <UserTable></UserTable>
     </div>
   );
 }
